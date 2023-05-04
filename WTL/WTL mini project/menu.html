@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" type="text/css" href="stylemenu.css">
+    
+  </head>
+  <body>
+    <script>
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const params = Object.fromEntries(urlSearchParams.entries());
+        const tableNumber = params.table;
+        const tableNumberElement = document.querySelector('#table-number');
+        tableNumberElement.textContent = tableNumber;
+      </script>
+    <h1>Menu for Table <span id="table-number"></span></h1>
+
+    
+    <h1>Our Menu</h1>
+    <div class="menu-container">
+      <div class="menu-filters">
+        <label for="category-select">Select a category:</label>
+        <select id="category-select">
+          <option value="all">All</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="snacks">Snacks</option>
+          <option value="main-course">Main Course</option>
+        </select>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>select</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="menu-item" data-category="breakfast">
+            <td>101</td>
+            <td>Idli</td>
+            <td>Steamed rice cakes made with fermented rice and black lentils</td>
+            <td>Rs. 50</td>
+            <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Idli_with_chutney_and_sambar.jpg/640px-Idli_with_chutney_and_sambar.jpg" alt="Idli"></td> -->
+            <td><img src="https://images.app.goo.gl/Skg1tN5ay3eNfaFM8" alt="Idli"></td>
+            <td><button>Select</button></td>
+           </tr>
+          <tr class="menu-item" data-category="breakfast">
+            <td>102</td>
+            <td>Dosa</td>
+            <td>Thin crispy crepe made from fermented rice and black lentils</td>
+            <td>Rs. 60</td>
+            <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Masala_dosa_Indian_pancake_with_potato_filling.jpg/640px-Masala_dosa_Indian_pancake_with_potato_filling.jpg" alt="Dosa"></td> -->
+            <td><img src="https://images.app.goo.gl/Skg1tN5ay3eNfaFM8" alt="Dosa"></td>
+            <td><button>Select</button></td>
+          </tr>
+          <tr class="menu-item" data-category="snacks">
+            <td>103</td>
+            <td>Vada</td>
+            <td>Deep-fried doughnut made from lentil flour</td>
+            <td>Rs. 40</td>
+            <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Vada.jpg/640px-Vada.jpg" alt="Vada"></td> -->
+            <td><img src="https://images.app.goo.gl/nhik5qZqHgCCtf4X6" alt="Vada"></td>
+            <td><button>Select</button></td>
+          </tr>
+          <tr class="menu-item" data-category="snacks">
+            <td>104</td>
+            <td>Pav Bhaji</td>
+            <td>Spicy vegetable curry served with a soft bread roll</td>
+            <td>Rs. 80</td>
+            <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Pav_Bhaji.JPG/640px-Pav_Bhaji.JPG" alt="Pav Bhaji"></td> -->
+            <td><img src="https://images.app.goo.gl/ZgcQ3kqvXhFvfs9g7" alt="Pav Bhaji"></td>
+            <td><button>Select</button></td>
+          </tr>
+          <tr class="menu-item" data-category="main-course">
+            <td>105</td>
+            <td>Chicken Biryani</td>
+            <td>Flavorful rice dish cooked with chicken and aromatic spices</td>
+            <td>Rs. 150</td>
+            <!-- <td><img src="https://upload.wikimedia.org/w -->
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Chicken_Biryani.jpg/640px-Chicken_Biryani.jpg" alt="Chicken Biryani"></td>
+        <td><button>Select</button></td>
+      </tr>
+    </tbody>
+    </table>
+  </body>
+</html>
